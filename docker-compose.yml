@@ -1,0 +1,15 @@
+version: '3'
+services:
+  web:
+    build: ./fedora
+    ports:
+      - "6022:22"
+      - "6900:5900"
+      - "6080:6080"
+    image: "fedora30:latest"
+    volumes: 
+      - ./fedora/fedora_files/etc:/etc
+      - ./fedora/fedora_files/home:/home
+      - ./fedora/fedora_files/root:/root
+      - ./fedora/fedora_files/opt:/opt
+ 
